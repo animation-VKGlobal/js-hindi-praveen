@@ -57,3 +57,18 @@ let regex = /ab+c/; // Represents a pattern used for matching character combinat
 
 // Reference types are stored as references in memory, meaning that when you assign or pass them
 //console.log(regex)
+
+
+// Memory Management Note:
+// Stack Memory: Used for storing primitive data types and function calls. It is fast and has a limited size.
+// Heap Memory: Used for storing reference types (objects, arrays, etc.). It is larger and more flexible but slower to access.
+
+let myName = "John"; // Stored in Stack Memory
+let myObj = { name: "John" }; // Stored in Heap Memory
+let myObjRef = myObj; // Reference to the same object in Heap Memory
+
+myObjRef.name = "Doe"; // Modifying the object through the reference
+console.log(myObj.name); // Output: Doe
+
+// Understanding the difference between primitive and reference types is crucial for effective JavaScript programming,
+// especially when it comes to memory management and performance optimization.
